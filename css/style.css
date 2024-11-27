@@ -1,0 +1,36 @@
+body {
+    background-color: gainsboro;
+    /* Use a system font, if none are available use an available sans-sarif */
+    font-family: system-ui, sans-serif;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 325px;
+  }
+  
+  .sqr {
+    width: 30%;
+    aspect-ratio: 1/1;
+    border: 3px solid black;
+    font-size: 64px;
+    text-align: center;
+  }
+  
+  .button{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    margin: auto;
+    padding: auto;
+    margin-top: 10px;
+    height: 50px;
+    width: 100px;
+  }
