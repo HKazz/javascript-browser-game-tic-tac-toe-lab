@@ -63,6 +63,7 @@ function render(){
 
 function updateBoard(event){
         if(turn === 'X'){
+            // squareEls.style.color = 'green'
             turn = 'O'
         }
         else if(turn === 'O'){
@@ -155,26 +156,29 @@ function checkForWinner(){
 
 function vsComputer(){
     cpuMode = true
-    turn = 'X'
+    // turn = 'X'
     console.log("Now Playing Against Computer")
+    console.log(turn)
 // it's always X's turn
+
     if(winner){
+        console.log("in winner")
         return
     }
-    else{
+    if(turn === 'O'){
         // something is not working here
         console.log('cpu is making a move')
         board.forEach((cell, index) => {
-        if(cell === '' && turn === 'O'){
+        if(cell === ''){
         // doesn't work, if statement is wrong
-        console.log('shit')
+        // console.log('shit')
             board[index] = 'O'
             console.log(index)
             turn = 'X'
-            // return true
+            return
         }
         // works
-        console.log('double shit')
+        // console.log('double shit')
         // return false
     });
     
@@ -182,6 +186,7 @@ function vsComputer(){
     updateBoard()
     updateMessage()
     checkForWinner() 
+
 }
     
     
